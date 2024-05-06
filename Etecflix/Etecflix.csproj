@@ -57,6 +57,30 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\10CoisasQueEuOdeioEmVoce.jpg" />
+	  <None Remove="Resources\Images\10CoisasQueEuOdeioEmVoce.jpg - Atalho.lnk" />
+	  <None Remove="Resources\Images\ACincoPassosDeVoce.jpg" />
+	  <None Remove="Resources\Images\APrincesaeoSapo.jpg" />
+	  <None Remove="Resources\Images\As.Branquelasjpg.jpg" />
+	  <None Remove="Resources\Images\AtravesDaMinhaJanela.jpg" />
+	  <None Remove="Resources\Images\BarbieVidaDeSereia.jpg" />
+	  <None Remove="Resources\Images\GenteGrande.jpg" />
+	  <None Remove="Resources\Images\HistoriasCruzadas.jpg" />
+	  <None Remove="Resources\Images\IndianaJones.jpg" />
+	  <None Remove="Resources\Images\Luca.jpg" />
+	  <None Remove="Resources\Images\MazeRunner.jpg" />
+	  <None Remove="Resources\Images\Maze_runner.jpg" />
+	  <None Remove="Resources\Images\MinhaMaeeUmaPecajpg.jpg" />
+	  <None Remove="Resources\Images\NoCoracaoDoMar.jpg" />
+	  <None Remove="Resources\Images\OFabricanteDeLagrimas.jpg" />
+	  <None Remove="Resources\Images\OImpossivel.jpg" />
+	  <None Remove="Resources\Images\PorAguaAbaixo.jpg" />
+	  <None Remove="Resources\Images\QueridoMenino.jpg" />
+	  <None Remove="Resources\Images\uncharted.jpg" />
+	  <None Remove="Resources\Images\vovozona.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
