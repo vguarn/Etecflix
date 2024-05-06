@@ -1,6 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Etecflix;
+using Microsoft.Extensions.Logging;
 
-namespace Etecflix
+namespace MauiAppCinema
 {
     public static class MauiProgram
     {
