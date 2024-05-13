@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Etecflix.categorias.romance"
+             Title="romance"
+             BackgroundColor="#c4bad4">
+    <VerticalStackLayout>
+        <ScrollView>
+            <Grid RowDefinitions="300,300,300"
+                  ColumnDefinitions="*,*"
+                  Padding="5">
+                <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="0"
+                             Source="dezcoisasqueeuodeioemvoce.jpg" x:Name="btndezcoisas"
+                             Clicked="btndezcoisas_Clicked"/>
+
+                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="0" 
+                             Source="acincopassosdevoce.jpg" x:Name="btncincopassos"
+                             Clicked="btncincopassos_Clicked"/>
+
+                <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="1"
+                             Source="atravesdaminhajanela.jpg" x:Name="btnjanela"
+                             Clicked="btnjanela_Clicked"/>
+
+                <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="1"
+                             Source="continencia.jpg" x:Name="btncontinencia"
+                             Clicked="btncontinencia_Clicked"/>
+                
+            </Grid>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>
