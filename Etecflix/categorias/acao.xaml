@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Etecflix.categorias.animacao"
-             Title="animacao"
-             BackgroundColor="#c4bad4">
+             x:Class="Etecflix.categorias.acao"
+             Title="acao">
     <VerticalStackLayout>
         <ScrollView>
             <Grid RowDefinitions="300,300,300"
@@ -11,20 +10,20 @@
                   Padding="5">
 
                 <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="0"
-                             Source="barbie.jpg" x:Name="btnbarbie"
-                             Clicked="btnbarbie_Clicked"/>
+                             Source="mazerunner.jpg" x:Name="btnmaze"
+                             Clicked="btnmaze_Clicked"/>
 
                 <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="0"
-                             Source="poraguaabaixo.jpg" x:Name="btnagua"
-                             Clicked="btnagua_Clicked"/>
+                             Source="nocoracaodomar.jpg" x:Name="btnmar"
+                             Clicked="btnmar_Clicked"/>
 
                 <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="1"
-                             Source="hotarubi.jpg" x:Name="btnhotarubi"
-                             Clicked="btnhotarubi_Clicked"/>
+                             Source="oimpossivel.jpg" x:Name="btnimpossivel"
+                             Clicked="btnimpossivel_Clicked"/>
 
                 <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="1"
-                             Source="koenokatachi.jpg" x:Name="btnkoenokatachi"
-                             Clicked="btnkoenokatachi_Clicked"/>
+                             Source="indianajones.jpg" x:Name="btnindiana"
+                             Clicked="btnindiana_Clicked"/>
             </Grid>
         </ScrollView>
     </VerticalStackLayout>

@@ -62,18 +62,22 @@
 	  <None Remove="Resources\Images\APrincesaeoSapo.jpg" />
 	  <None Remove="Resources\Images\As.Branquelasjpg.jpg" />
 	  <None Remove="Resources\Images\AtravesDaMinhaJanela.jpg" />
-	  <None Remove="Resources\Images\BarbieVidaDeSereia.jpg" />
+	  <None Remove="Resources\Images\barbie.jpg" />
 	  <None Remove="Resources\Images\besouro.jpg" />
+	  <None Remove="Resources\Images\cidadededeus.jpg" />
 	  <None Remove="Resources\Images\continencia.jpg" />
 	  <None Remove="Resources\Images\dezcoisasqueeuodeioemvoce.jpg" />
 	  <None Remove="Resources\Images\GenteGrande.jpg" />
 	  <None Remove="Resources\Images\HistoriasCruzadas.jpg" />
+	  <None Remove="Resources\Images\hojeeuquerovoltarsozinho.jpg" />
+	  <None Remove="Resources\Images\hotarubi.jpg" />
 	  <None Remove="Resources\Images\IndianaJones.jpg" />
+	  <None Remove="Resources\Images\koenokatachi.jpg" />
 	  <None Remove="Resources\Images\Luca.jpg" />
 	  <None Remove="Resources\Images\MazeRunner.jpg" />
-	  <None Remove="Resources\Images\Maze_runner.jpg" />
-	  <None Remove="Resources\Images\MinhaMaeeUmaPecajpg.jpg" />
+	  <None Remove="Resources\Images\minhamae.jpg" />
 	  <None Remove="Resources\Images\NoCoracaoDoMar.jpg" />
+	  <None Remove="Resources\Images\oautodacompadecida.jpg" />
 	  <None Remove="Resources\Images\OFabricanteDeLagrimas.jpg" />
 	  <None Remove="Resources\Images\OImpossivel.jpg" />
 	  <None Remove="Resources\Images\PorAguaAbaixo.jpg" />
@@ -89,10 +93,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="categorias\acao.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="categorias\animacao.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="categorias\comedia.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="categorias\drama.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="categorias\nacional.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="categorias\romance.xaml">
