@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Etecflix.categorias.animacao"
-             Title="animacao"
-             BackgroundColor="#c4bad4">
+             Title="Animação"
+             BackgroundColor="#472C3D">
     <VerticalStackLayout>
         <ScrollView>
             <Grid RowDefinitions="300,300,300"

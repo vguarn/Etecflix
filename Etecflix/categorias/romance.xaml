@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Etecflix.categorias.romance"
              Title="romance"
-             BackgroundColor="#c4bad4">
+             BackgroundColor="#472C3D">
     <VerticalStackLayout>
         <ScrollView>
             <Grid RowDefinitions="300,300,300"

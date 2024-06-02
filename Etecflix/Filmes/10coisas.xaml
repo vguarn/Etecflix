@@ -2,11 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Etecflix.Filmes._10coisas"
-             Title="_10coisas">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="10 coisas que eu odeio em você"   
+             BackgrounColor ="#472C3D"
+        
+             
+             <Web
+             
+             
+             
+             
+            
 </ContentPage>
