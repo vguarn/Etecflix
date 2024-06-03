@@ -1,0 +1,51 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFlix.Filmes.animacao.hotarubi"
+             Title="Hotarubi no mori e"
+             BackgroundColor="#472C3D">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="titulo">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style TargetType="Label" x:Key="textoTitulo">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid RowDefinitions="*,*" ColumnDefinitions="*">
+        <WebView Grid.Column="0" Grid.Row="0"
+             Source="https://youtu.be/uVPZwPJ80RQ?si=rbcAOCi8p1xGfvDQ"/>
+        <ScrollView Grid.Row="1" Grid.Column="0">
+            <Grid RowDefinitions="*,*" ColumnDefinitions="*, *">
+                <Image Grid.Column="0" Grid.Row="0"
+                   Source="hotarubi.jpg" HeightRequest="300"/>
+                <StackLayout VerticalOptions="CenterAndExpand"
+                         Grid.Column="1" Grid.Row="0">
+                    <Label Text="DATA DE LANÇAMENTO:"
+                       Style="{StaticResource titulo}"/>
+                    <Label Text="17 de setembro de 2011"
+                       Style="{StaticResource textoTitulo}"
+                       TextColor="White"/>
+                    <Label Text="DIREÇÃO" Margin="0, 20, 0, 0"
+                       Style="{StaticResource titulo}"/>
+                    <Label Text="Takahiro Omori"
+                       Style="{StaticResource textoTitulo}"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+                    <Label Text="SINOPSE" Style="{StaticResource titulo}"/>
+                    <Label x:Name="sinopse" Text="O filme trata-se de uma adaptação de uma manga escrita por Yuki Midorikawa, mais conhecida pelo seu trabalho mais popular, Natsume Yuujinchou. Hotarubi no Mori e conta-nos a história de uma menina, Hotaru e da sua relação com Gin, uma entidade sobrenatural. Aos seis anos, Hotaru perde-se numa floresta perto da casa de campo do seu tio. Segundo os rumores, esta floresta era habitada por um espírito da montanha e yokai (criaturas sobrenaturais do folclore japonês). Hotaru é encontrada por Gin, uma entidade sobrenatural com aparência humana. Este informa-a que se for tocado por um humano, irá desaparecer para sempre. Ele ajuda Hotaru a encontrar o seu caminho para casa, mas no dia seguinte, a criança regressa à floresta, assim como nos restantes dias daquele Verão. Apesar das suas interações estarem bastante limitadas, Hotaru e Gin tornam-se amigos. E assim, nos Verões seguintes, Hotaru volta à floresta para visitar Gin."
+                       TextColor="White"
+                       FontSize="Medium" Padding="5"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

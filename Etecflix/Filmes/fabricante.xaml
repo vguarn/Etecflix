@@ -1,12 +1,53 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Etecflix.Filmes.fabricante"
-             Title="fabricante">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="MauiFlix.Filmes.drama.fabricante"
+             Title="O fabricante de lágrimas"
+             BackgroundColor="#472C3D">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style TargetType="Label" x:Key="titulo">
+				<Setter Property="FontSize" Value="20"/>
+				<Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+				<Setter Property="TextColor" Value="White"/>
+			</Style>
+			<Style TargetType="Label" x:Key="textoTitulo">
+				<Setter Property="FontSize" Value="10"/>
+				<Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+				<Setter Property="TextColor" Value="White"/>
+
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<Grid RowDefinitions="*,*" ColumnDefinitions="*">
+		<WebView Grid.Column="0" Grid.Row="0"
+             Source="https://youtu.be/jF1AE0jIZCk?si=J6k823ZtIywFAlvO"/>
+		<ScrollView Grid.Row="1" Grid.Column="0">
+			<Grid RowDefinitions="*,*" ColumnDefinitions="*, *">
+				<Image Grid.Column="0" Grid.Row="0"
+                   Source="OFabricanteDeLagrimas.jpg" HeightRequest="300"/>
+				<StackLayout VerticalOptions="CenterAndExpand"
+                         Grid.Column="1" Grid.Row="0">
+					<Label Text="DATA DE LANÇAMENTO:"
+                       Style="{StaticResource titulo}"/>
+					<Label Text="4 de abril de 2024"
+                       Style="{StaticResource textoTitulo}"
+                       TextColor="White"/>
+					<Label Text="DIREÇÃO" Margin="0, 20, 0, 0"
+                       Style="{StaticResource titulo}"/>
+					<Label Text="Alessandro Genovesi"
+                       Style="{StaticResource textoTitulo}"/>
+				</StackLayout>
+				<StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+					<Label Text="SINOPSE" Style="{StaticResource titulo}"/>
+					<Label x:Name="sinopse" Text="O Fabricante de Lágrimas é baseado no best-seller homônimo de Erin Doom e conta sobre Nica (Caterina Ferioli), uma jovem órfã que cresceu ouvindo sobre a lenda do fabricante de lágrimas. A lenda consiste em um artesão misterioso responsável por criar nos humanos todos os caos dentro do coração. Nica, aos 17 anos, deixa os contos de fadas de lado pois está prestes a ser adotada, finalmente, mas o que seria um sonho para ela acaba virando um pesadelo, uma vez que a adoção dela será junto com Rigel (Simone Baldassari) e ele é a pior pessoa que ela gostaria de ter como irmão, já que ele esconde uma natureza sombria apesar de sua boa aparência.
+
+Nica e Rigel, agora irmãos, por mais que tenham um passado com muitas dificuldades, eles escondem essas emoções por meio de raiva, fazendo com que cada um seja o próprio fabricante de lágrimas no outro. Com essa figura mística em jogo, eles terão de encontrar uma maneira de superarem seu obstáculos internos e aceitarem o amor que os atrai."
+                       TextColor="White"
+                       FontSize="Medium" Padding="5"/>
+				</StackLayout>
+			</Grid>
+		</ScrollView>
+	</Grid>
 </ContentPage>

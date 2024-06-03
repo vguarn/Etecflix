@@ -1,12 +1,53 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Etecflix.Filmes.atravesdajanela"
-             Title="atravesdajanela">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="MauiFlix.Filmes.romance.atravesdaminhajanela"
+             Title="Através da minha janela"
+             BackgroundColor="#472C3D">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style TargetType="Label" x:Key="titulo">
+				<Setter Property="FontSize" Value="20"/>
+				<Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+				<Setter Property="TextColor" Value="White"/>
+			</Style>
+			<Style TargetType="Label" x:Key="textoTitulo">
+				<Setter Property="FontSize" Value="10"/>
+				<Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+				<Setter Property="TextColor" Value="White"/>
+
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<Grid RowDefinitions="*,*" ColumnDefinitions="*">
+		<WebView Grid.Column="0" Grid.Row="0"
+             Source="https://youtu.be/DB9-hN0s3r8?si=RWCErhvC1PUiqasu"/>
+		<ScrollView Grid.Row="1" Grid.Column="0">
+			<Grid RowDefinitions="*,*" ColumnDefinitions="*, *">
+				<Image Grid.Column="0" Grid.Row="0"
+                   Source="AtravesDaMinhaJanela.jpg" HeightRequest="300"/>
+				<StackLayout VerticalOptions="CenterAndExpand"
+                         Grid.Column="1" Grid.Row="0">
+					<Label Text="DATA DE LANÇAMENTO:"
+                       Style="{StaticResource titulo}"/>
+					<Label Text="  4 de fevereiro de 2022 "
+                       Style="{StaticResource textoTitulo}"
+                       TextColor="White"/>
+					<Label Text="DIREÇÃO" Margin="0, 20, 0, 0"
+                       Style="{StaticResource titulo}"/>
+					<Label Text="Marcal Fores"
+                       Style="{StaticResource textoTitulo}"/>
+				</StackLayout>
+				<StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+					<Label Text="SINOPSE" Style="{StaticResource titulo}"/>
+					<Label x:Name="sinopse" Text="O quarto de Raquel (Clara Galle) possui uma janela que dá de frente para o quarto de seu vizinho. Por meio da silhueta do corpo dele, ela gosta de observá-lo pela janela e imaginar como é a sua personalidade por trás da máscara social que ele veste todos os dias.
+
+Um dia, este vizinho, chamado Ares (Julio Peña), é flagrado por ela tentando acessar o Wi-Fi de sua casa. Curiosa pelo acontecimento, Raquel fica ainda mais atiçada para buscar mais informações sobre o garoto, mas o que ela descobre é sempre muito vago: Ares é conhecido por ser um jovem de expressão dura, comportamento frio e distante, e sem laços emocionais complexos ou duradouros (principalmente com meninas). aquel tem muitos motivos para não insistir em algo tão incerto quanto uma aproximação com ele, mas Ares descobre a respeito da obsessão dela por ele. Eventualmente, ambos são atraídos um para o outro, e exploram, juntos, diferentes despertares sexual e emocional. Será que um romance poderia nascer desta união improvável?"
+                       TextColor="White"
+                       FontSize="Medium" Padding="5"/>
+				</StackLayout>
+			</Grid>
+		</ScrollView>
+	</Grid>
 </ContentPage>

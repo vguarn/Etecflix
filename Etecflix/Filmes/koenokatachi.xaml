@@ -1,0 +1,51 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFlix.Filmes.animacao.koenokatachi"
+             Title="Koe no katachi"
+             BackgroundColor="#472C3D">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="titulo">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style TargetType="Label" x:Key="textoTitulo">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+                <Setter Property="TextColor" Value="White"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid RowDefinitions="*,*" ColumnDefinitions="*">
+        <WebView Grid.Column="0" Grid.Row="0"
+             Source="https://youtu.be/nfK6UgLra7g?si=ZttxO0HJjDG-WCOJ"/>
+        <ScrollView Grid.Row="1" Grid.Column="0">
+            <Grid RowDefinitions="*,*" ColumnDefinitions="*, *">
+                <Image Grid.Column="0" Grid.Row="0"
+                   Source="koenokatachi.jpg" HeightRequest="300"/>
+                <StackLayout VerticalOptions="CenterAndExpand"
+                         Grid.Column="1" Grid.Row="0">
+                    <Label Text="DATA DE LANÇAMENTO:"
+                       Style="{StaticResource titulo}"/>
+                    <Label Text="17 de setembro de 2016"
+                       Style="{StaticResource textoTitulo}"
+                       TextColor="White"/>
+                    <Label Text="DIREÇÃO" Margin="0, 20, 0, 0"
+                       Style="{StaticResource titulo}"/>
+                    <Label Text="Naoko Yamada"
+                       Style="{StaticResource textoTitulo}"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+                    <Label Text="SINOPSE" Style="{StaticResource titulo}"/>
+                    <Label x:Name="sinopse" Text="A Voz do Silêncio: Koe no Katachi conta a história de Shoya Ishida, um bully, e Shoko Nishimiya, uma menina com um tipo de deficiência auditiva. A história começa quando os dois estão na sexta série e Shoko chega em uma nova escola. No começo, as crianças ficam curiosas em se comunicar com a nova coleguinha, mas pouco a pouco começam a ver a diferença como uma desculpa para maltratar e isolar a jovem. Shoya lidera as maiores crueldades, mas, anos depois, se vê colocado na posição da vítima até por aqueles que o apoiavam."
+                       TextColor="White"
+                       FontSize="Medium" Padding="5"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

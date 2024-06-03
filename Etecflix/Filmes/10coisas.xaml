@@ -1,15 +1,51 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Etecflix.Filmes._10coisas"
-             Title="10 coisas que eu odeio em você"   
-             BackgrounColor ="#472C3D"
-        
-             
-             <Web
-             
-             
-             
-             
-            
+             x:Class="MauiFlix.Filmes.romance.10coisas"
+             Title="10 coisas que eu odeio em você"
+             BackgroundColor="#472C3D">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style TargetType="Label" x:Key="titulo">
+				<Setter Property="FontSize" Value="20"/>
+				<Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+				<Setter Property="TextColor" Value="White"/>
+			</Style>
+			<Style TargetType="Label" x:Key="textoTitulo">
+				<Setter Property="FontSize" Value="10"/>
+				<Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+				<Setter Property="TextColor" Value="White"/>
+
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<Grid RowDefinitions="*,*" ColumnDefinitions="*">
+		<WebView Grid.Column="0" Grid.Row="0"
+             Source="https://youtu.be/2f8_0uvnHYw?si=WhuqEjmAmyU3kq-g"/>
+		<ScrollView Grid.Row="1" Grid.Column="0">
+			<Grid RowDefinitions="*,*" ColumnDefinitions="*, *">
+				<Image Grid.Column="0" Grid.Row="0"
+                   Source="dezcoisasqueeuodeioemvoce.jpg" HeightRequest="300"/>
+				<StackLayout VerticalOptions="CenterAndExpand"
+                         Grid.Column="1" Grid.Row="0">
+					<Label Text="DATA DE LANÇAMENTO:"
+                       Style="{StaticResource titulo}"/>
+					<Label Text="31 de março de 1999"
+                       Style="{StaticResource textoTitulo}"
+                       TextColor="White"/>
+					<Label Text="DIREÇÃO" Margin="0, 20, 0, 0"
+                       Style="{StaticResource titulo}"/>
+					<Label Text="Gil Junger"
+                       Style="{StaticResource textoTitulo}"/>
+				</StackLayout>
+				<StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+					<Label Text="SINOPSE" Style="{StaticResource titulo}"/>
+					<Label x:Name="sinopse" Text="Bianca Stratford é bonita e popular, mas não pode namorar antes que sua irmã mais velha encontre um namorado primeiro. O problema é que nenhum garoto consegue chegar perto da irmã, Kat Stratford. Para resolver a situação, um rapaz interessado em Bianca suborna um amigo com passado misterioso para sair com Kat e, quem sabe, tentar conquistá-la."
+                       TextColor="White"
+                       FontSize="Medium" Padding="5"/>
+				</StackLayout>
+			</Grid>
+		</ScrollView>
+	</Grid>
 </ContentPage>

@@ -1,12 +1,51 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Etecflix.Filmes.nocoracao"
-             Title="nocoracao">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="MauiFlix.Filmes.acao.nocoracao"
+             Title="No coração do mar"
+             BackgroundColor="#472C3D">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style TargetType="Label" x:Key="titulo">
+				<Setter Property="FontSize" Value="20"/>
+				<Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+				<Setter Property="TextColor" Value="White"/>
+			</Style>
+			<Style TargetType="Label" x:Key="textoTitulo">
+				<Setter Property="FontSize" Value="10"/>
+				<Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+				<Setter Property="TextColor" Value="White"/>
+
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<Grid RowDefinitions="*,*" ColumnDefinitions="*">
+		<WebView Grid.Column="0" Grid.Row="0"
+             Source="https://youtu.be/E_hwdx5k5_k?si=NNCZL-YJPsD51X9k"/>
+		<ScrollView Grid.Row="1" Grid.Column="0">
+			<Grid RowDefinitions="*,*" ColumnDefinitions="*, *">
+				<Image Grid.Column="0" Grid.Row="0"
+                   Source="NoCoracaoDoMar.jpg" HeightRequest="300"/>
+				<StackLayout VerticalOptions="CenterAndExpand"
+                         Grid.Column="1" Grid.Row="0">
+					<Label Text="DATA DE LANÇAMENTO:"
+                       Style="{StaticResource titulo}"/>
+					<Label Text="3 de dezembro de 2015"
+                       Style="{StaticResource textoTitulo}"
+                       TextColor="White"/>
+					<Label Text="DIREÇÃO" Margin="0, 20, 0, 0"
+                       Style="{StaticResource titulo}"/>
+					<Label Text="Ron Howard"
+                       Style="{StaticResource textoTitulo}"/>
+				</StackLayout>
+				<StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+					<Label Text="SINOPSE" Style="{StaticResource titulo}"/>
+					<Label x:Name="sinopse" Text="A tripulação do barco baleeiro Essex precisa fazer o impossível para sobreviver em uma ilha deserta após sofrer brutal ataque de uma baleia gigantesca."
+                       TextColor="White"
+                       FontSize="Medium" Padding="5"/>
+				</StackLayout>
+			</Grid>
+		</ScrollView>
+	</Grid>
 </ContentPage>

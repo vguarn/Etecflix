@@ -1,12 +1,51 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Etecflix.Filmes.oimpossivel"
-             Title="oimpossivel">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="MauiFlix.Filmes.acao.oimpossivel"
+             Title="O impossível"
+             BackgroundColor="#472C3D">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style TargetType="Label" x:Key="titulo">
+				<Setter Property="FontSize" Value="20"/>
+				<Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+				<Setter Property="TextColor" Value="White"/>
+			</Style>
+			<Style TargetType="Label" x:Key="textoTitulo">
+				<Setter Property="FontSize" Value="10"/>
+				<Setter Property="HorizontalTextAlignment" Value="Start"/>
+
+				<Setter Property="TextColor" Value="White"/>
+
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<Grid RowDefinitions="*,*" ColumnDefinitions="*">
+		<WebView Grid.Column="0" Grid.Row="0"
+             Source="https://youtu.be/N6W5jbWq_h0?si=T-BNV2oE_GxHLiWf"/>
+		<ScrollView Grid.Row="1" Grid.Column="0">
+			<Grid RowDefinitions="*,*" ColumnDefinitions="*, *">
+				<Image Grid.Column="0" Grid.Row="0"
+                   Source="OImpossivel.jpg" HeightRequest="300"/>
+				<StackLayout VerticalOptions="CenterAndExpand"
+                         Grid.Column="1" Grid.Row="0">
+					<Label Text="DATA DE LANÇAMENTO:"
+                       Style="{StaticResource titulo}"/>
+					<Label Text="21 de dezembro de 2012"
+                       Style="{StaticResource textoTitulo}"
+                       TextColor="White"/>
+					<Label Text="DIREÇÃO" Margin="0, 20, 0, 0"
+                       Style="{StaticResource titulo}"/>
+					<Label Text="Juan Antonio Bayona"
+                       Style="{StaticResource textoTitulo}"/>
+				</StackLayout>
+				<StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+					<Label Text="Sinopse" Style="{StaticResource titulo}"/>
+					<Label x:Name="sinopse" Text="O casal Maria e Henry está aproveitando as férias de inverno na Tailândia junto com os três filhos pequenos. Mas em uma manhã, um tsunami de proporções devastadoras atinge o local, arrastando tudo o que encontra pela frente. Separados em dois grupos, a mãe e o filho mais velho vão enfrentar situações desesperadoras para se manterem vivos, enquanto, o pai e as duas crianças menores não sabem se os outros dois ainda estão vivos."
+                       TextColor="White"
+                       FontSize="Medium" Padding="5"/>
+				</StackLayout>
+			</Grid>
+		</ScrollView>
+	</Grid>
 </ContentPage>

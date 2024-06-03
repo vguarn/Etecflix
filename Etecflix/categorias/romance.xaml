@@ -18,7 +18,7 @@
                              Clicked="btncincopassos_Clicked"/>
 
                 <ImageButton Aspect="AspectFill" Grid.Column="0" Grid.Row="1"
-                             Source="atravesdaminhajanela.jpg" x:Name="btnjanela"
+                             Source="AtravesDaMinhaJanela.jpg" x:Name="btnjanela"
                              Clicked="btnjanela_Clicked"/>
 
                 <ImageButton Aspect="AspectFill" Grid.Column="1" Grid.Row="1"
